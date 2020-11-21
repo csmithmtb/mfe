@@ -20,9 +20,6 @@ const commonConfig = require('./webpack.common');
        },
        shared: packageJson.dependencies,
      }),
-     new HtmlWebpackPlugin({
-       template: './public/index.html',
-     })
    ]
  };
 
