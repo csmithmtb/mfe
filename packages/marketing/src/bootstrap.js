@@ -19,5 +19,5 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 // If we are running through the container,
-// then it will call mount to start app
+// container will call mount to start app
 export { mount };
