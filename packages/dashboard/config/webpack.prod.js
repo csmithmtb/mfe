@@ -14,7 +14,7 @@ const commonConfig = require('./webpack.common');
        name: 'dashboard',
        filename: 'remoteEntry.js',
        exposes: {
-         './DeshboardApp': './src/bootstrap'
+         './DashboardApp': './src/bootstrap'
        },
        shared: packageJson.dependencies,
      }),
