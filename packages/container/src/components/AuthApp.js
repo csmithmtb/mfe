@@ -1,8 +1,8 @@
-import { mount } from 'marketing/MarketingApp';
+import { mount } from 'auth/AuthApp';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default () => {
+export default ( {onSignIn }) => {
   const ref = useRef(null);
   const history = useHistory();
 
@@ -15,7 +15,12 @@ export default () => {
         if (pathname !== nextPathname) {
           history.push(nextPathname);
         }
-      }
+      },
+      // Or...short hand because the 'onSignIn' can just be passed down.
+      // onSignIn, 
+      onSignIn: () => {
+        onSignIn();
+      },
     });
 
     history.listen(onParentNavigate);
